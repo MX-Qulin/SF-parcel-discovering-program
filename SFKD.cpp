@@ -6,28 +6,28 @@
 //99 bugs in the code,
 //fix one bug, compile it again,
 //101 little bugs in the code.
-//101 little bugs in the code¡­.
+//101 little bugs in the codeâ€¦.
 //(Repeat until BUGS = 0)
 /* Porgram about SF's parcel */
 #include<bits/stdc++.h>
 using namespace std;
-double x,y,qp=1,v; char c;                       //qp=1:27ĞĞ²»ÄÜ³ıÒÔ0
+double x,y,qp=1,v; char c;                       //qp=1:27è¡Œä¸èƒ½é™¤ä»¥0
 long long a,b,l,w,h;
-double strange_solve(double o){                  //¼ÆÖØ
+double strange_solve(double o){                  //è®¡é‡
     if(a<=1) return 1;
-	if(o<100) if(o-floor(o)<=0.5) return floor(o)+0.5;//floor:ÏÂÈ¡Õû
-	          else return ceil(o);               //ceil:ÉÏÈ¡Õû
-	return round(o);                             //round:ËÄÉáÎåÈë
+	if(o<100) if(o-floor(o)<=0.5&&o-floor(o)>0) return floor(o)+0.5;//floor:ä¸‹å–æ•´
+	          else return ceil(o);               //ceil:ä¸Šå–æ•´
+	return round(o);                             //round:å››èˆäº”å…¥
 }
 int main(){
-	cout<<"ÊäÈëÊ×ÖØ(kg/Ôª):",cin >> a,cout<<"ÊäÈëĞøÖØ(kg/Ôª):",cin >> b,cout<<"ÊäÈëÎïÌåÖØÁ¿(kg):",cin >> x;
-	cout<<"¼ÆÁ¿Ìå»ıÖØÁ¿ÂğÊäÈë(Y/N)",cin >> c; if(c=='Y'){
-	cout<<"ÊäÈë³¤(m)",cin >> l,cout<<"ÊäÈë¿í(m)",cin >> w,cout<<"ÊäÈë¸ß",cin >> h;
-	cout<<"ÊäÈëÇáÅ×ÏµÊı",cin >> qp;}
-	x=strange_solve(x);                          //°´ÕÕË³·áµÄ·½Ê½¼ÆÖØ
-	v=(l*w*h)/qp;                                //¼ÆËãÌå»ıÖØÁ¿
-	x=max(v,x);                                  //È¡Ìå»ıÖØÁ¿,Êµ¼ÊÖØÁ¿×î´óÖµ
-	cout << a+(x-1)*b << "Ôª";                   //°´ÕÕË³·áµÄ·½Ê½¼Æ¼Û
+	cout<<"è¾“å…¥é¦–é‡(kg/å…ƒ):",cin >> a,cout<<"è¾“å…¥ç»­é‡(kg/å…ƒ):",cin >> b,cout<<"è¾“å…¥ç‰©ä½“é‡é‡(kg):",cin >> x;
+	cout<<"è®¡é‡ä½“ç§¯é‡é‡å—è¾“å…¥(Y/N)",cin >> c; if(c=='Y'){
+	cout<<"è¾“å…¥é•¿(m)",cin >> l,cout<<"è¾“å…¥å®½(m)",cin >> w,cout<<"è¾“å…¥é«˜",cin >> h;
+	cout<<"è¾“å…¥è½»æŠ›ç³»æ•°",cin >> qp;}
+	x=strange_solve(x);                          //æŒ‰ç…§é¡ºä¸°çš„æ–¹å¼è®¡é‡
+	v=(l*w*h)/qp;                                //è®¡ç®—ä½“ç§¯é‡é‡
+	x=max(v,x);                                  //å–ä½“ç§¯é‡é‡,å®é™…é‡é‡æœ€å¤§å€¼
+	cout << a+(x-1)*b << "å…ƒ";                   //æŒ‰ç…§é¡ºä¸°çš„æ–¹å¼è®¡ä»·
 	getchar();
 	return 0;
 }
